@@ -1,0 +1,67 @@
+class Consumer {
+	-id
+	-type
+	-name
+	-url
+	-redirect_uri
+	-icon
+	-description
+	-client_id
+	-client_secret
+	-issued_at
+	-expires_in
+
+	+refreshSecretKey()
+}
+
+class Scope {
+	-id
+	-name
+}
+
+class User {
+	-id
+	-username
+	-password
+	-created_at
+	-status
+}
+
+class Grant {
+	-id
+	-fk_consumer
+	-fk_user
+	-created_at
+	-updated_at
+}
+
+class Permission {
+	-id
+	-fk_grant
+	-fk_scope
+}
+
+
+class Token {
+	-id
+	-fk_grant
+	-token
+	-expires_in
+	
+	+refreshAccessToken()
+}
+
+class Code {
+	-id
+	-fk_grant
+	-code
+	-expires_in
+}
+
+Token -> Grant : 1:N
+Code -> Grant: 1:N
+Permission -> Grant : 1:N
+Permission -> Scope : 1:N
+
+Grant -> Consumer : 1:1
+Grant -> User : 1:1

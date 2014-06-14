@@ -8,7 +8,7 @@
   <name>api-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
     <properties>
-        <oltu.version>0.31-SNAPSHOT</oltu.version>
+        <oltu.version>1.0.0</oltu.version>
         <cxf.version>2.2.10</cxf.version>
         <org.springframework.version>3.0.3.RELEASE</org.springframework.version>
         <spring-mock.version>2.0.8</spring-mock.version>
@@ -21,6 +21,7 @@
         <jersey-server.version>1.8</jersey-server.version>
         
     </properties>
+    <!--
     <repositories>
         <repository>
             <id>maven2-repository.java.net</id>
@@ -29,7 +30,7 @@
             <layout>default</layout>
         </repository>
     </repositories>
-
+-->
 
 
   <dependencies>
@@ -43,44 +44,44 @@
 
 	  
  <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-common</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.common</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-client</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.client</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-authzserver</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.authzserver</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-httpclient4</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.httpclient4</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-resourceserver</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.resourceserver</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-dynamicreg-client</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.dynamicreg.client</artifactId>
       <version>${oltu.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.oltu</groupId>
-      <artifactId>oltu-oauth2-dynamicreg-server</artifactId>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.dynamicreg.server</artifactId>
       <version>${oltu.version}</version>
     </dependency>	  
 

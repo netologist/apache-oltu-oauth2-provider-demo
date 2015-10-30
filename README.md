@@ -15,7 +15,7 @@ Request Examples
       	redirect_url: "localhost:8080/callback"
     }
 
-    OUTPUT
+    RESPONSE
     {
         "client_secret": "someclientsecret",
         "issued_at": "0123456789",

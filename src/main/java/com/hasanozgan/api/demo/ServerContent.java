@@ -1,4 +1,4 @@
-package com.bilyoner.api.demo;
+package com.hasanozgan.api.demo;
 
 public class ServerContent {
     public static final String CLIENT_ID = "someclientid";

@@ -1,3 +1,0 @@
-[submodule "amber"]
-	path = amber
-	url = git://github.com/apache/amber.git

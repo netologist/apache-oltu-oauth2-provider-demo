@@ -1,4 +1,4 @@
-package com.bilyoner.api.endpoints;
+package com.hasanozgan.api.endpoints;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ import org.apache.oltu.oauth2.common.utils.OAuthUtils;
 import org.apache.oltu.oauth2.rs.request.OAuthAccessResourceRequest;
 import org.apache.oltu.oauth2.rs.response.OAuthRSResponse;
 
-import com.bilyoner.api.demo.TestContent;
+import com.hasanozgan.api.demo.TestContent;
 
 
 /**

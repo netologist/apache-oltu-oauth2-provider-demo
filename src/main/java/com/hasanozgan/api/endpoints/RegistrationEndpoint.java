@@ -1,4 +1,4 @@
-package com.bilyoner.api.endpoints;
+package com.hasanozgan.api.endpoints;
 
 /**
  *       Copyright 2010 Newcastle University
@@ -39,7 +39,7 @@ import org.apache.oltu.oauth2.ext.dynamicreg.server.request.OAuthServerRegistrat
 import org.apache.oltu.oauth2.ext.dynamicreg.server.response.OAuthServerRegistrationResponse;
 //import org.apache.oltu.oauth2.integration.CommonExt;
 
-import com.bilyoner.api.demo.ServerContent;
+import com.hasanozgan.api.demo.ServerContent;
 
 /**
  *
@@ -59,6 +59,7 @@ public class RegistrationEndpoint {
         OAuthServerRegistrationRequest oauthRequest = null;
         try {
             oauthRequest = new OAuthServerRegistrationRequest(new JSONHttpServletRequestWrapper(request));
+            oauthRequest.getType();
             oauthRequest.discover();
             oauthRequest.getClientName();
             oauthRequest.getClientUrl();

@@ -1,4 +1,4 @@
-package com.bilyoner.api.endpoints;
+package com.hasanozgan.api.endpoints;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

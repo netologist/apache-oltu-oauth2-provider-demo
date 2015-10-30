@@ -1,4 +1,4 @@
-package com.bilyoner.api.demo;
+package com.hasanozgan.api.demo;
 
 public class ClientContent {
     public static final String REGISTRATION_ENDPOINT = "http://localhost:8080/register";

@@ -1,4 +1,4 @@
-package com.bilyoner.api.demo;
+package com.hasanozgan.api.demo;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;

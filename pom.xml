@@ -162,13 +162,37 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.10</version>
                 <configuration>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                    </webApp>
-                    <stopKey/>
-                    <stopPort/>
-                </configuration>
+                     <scanIntervalSeconds>10</scanIntervalSeconds>
+-                    <stopKey>foo</stopKey>
+-                    <stopPort>9999</stopPort>
+-                    <contextPath>/</contextPath>
++                    <webApp>
++                        <contextPath>/</contextPath>
++                    </webApp>
++                    <stopKey/>
++                    <stopPort/>
+                  
+-                <executions>
+-                    <execution>
+-                        <id>start-jetty</id>
+-                        <phase>pre-integration-test</phase>
+-                        <goals>
+-                            <goal>run</goal>
+-                        </goals>
+-                        <configuration>
+-                            <scanIntervalSeconds>0</scanIntervalSeconds>
+-                            <daemon>true</daemon>
+-                        </configuration>
+-                    </execution>
+-                    <execution>
+-                        <id>stop-jetty</id>
+-                        <phase>post-integration-test</phase>
+-                        <goals>
+-                            <goal>stop</goal>
+-                        </goals>
+-                    </execution>
+-                </executions>
+</configuration>
             </plugin>
 
         </plugins>

@@ -13,6 +13,9 @@ OAuth2 provides several grant types.  In this example we will be using Authorisa
 
 Request Examples
 ==
+In the root folder, there is a postman collection OLTU.postmain_collection.json that you could use to try out
+these requests.
+
 Register:
 --
 Before you can begin the OAuth process, you must first register a new app with the service.

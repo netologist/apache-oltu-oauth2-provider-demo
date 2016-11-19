@@ -1,0 +1,181 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OLTU",
+		"_postman_id": "212b8834-4bc9-2cd5-1a26-a3b2fd1b43ee",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"url": "http://localhost:8080/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  type: \"pull\", \n  client_name:\"test-app\", \n  client_url:\"localhost:8080\", \n  client_description:\"example app\", \n  redirect_url:\"localhost:8080\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "authorise",
+			"request": {
+				"url": "http://localhost:8080/auth?redirect_uri=/redirect&uri=/uri&state=state&scope=read_ekycclaims&response_type=code&client_id=clientid",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  type: \"pull\", \n  client_name:\"test-app\", \n  client_url:\"localhost:8080\", \n  client_description:\"example app\", \n  redirect_url:\"localhost:8080\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"url": "http://localhost:8080/token?redirect_uri=/redirect&grant_type=authorization_code&code=known_authz_code&client_id=test_id&client_secret=secret",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "test_id",
+							"type": "text",
+							"enabled": false
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"enabled": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "validate access token with response in resource_body",
+			"request": {
+				"url": "http://localhost:8080/resource_body?access_token=access_token_expired",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "validate access token with response in resource_header",
+			"request": {
+				"url": "http://localhost:8080/resource_header",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "//Authorization",
+						"value": "Bearer 0b79bab50daca910b000d4f1a2b675d604257e42",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer access_token_valid",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "test_id",
+							"type": "text",
+							"enabled": false
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"enabled": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "validate access token with response in resource_query",
+			"request": {
+				"url": "http://localhost:8080/resource_query?access_token=access_token_valid",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "test_id",
+							"type": "text",
+							"enabled": false
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"enabled": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
